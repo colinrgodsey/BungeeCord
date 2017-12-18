@@ -197,7 +197,9 @@ public abstract class EntityMap
                     }
                     break;
                 default:
-                    throw new IllegalArgumentException( "Unknown meta type " + type );
+                    //throw new IllegalArgumentException( "Unknown meta type " + type );
+                    packet.readerIndex( readerIndex );
+                    return;
             }
         }
 
